@@ -1350,7 +1350,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="22" name="exit" width="54" height="100" visible="0">
+ <layer id="22" name="exit" width="54" height="100" opacity="0">
   <properties>
    <property name="exitUrl" value="world://lobby/main.json"/>
   </properties>
