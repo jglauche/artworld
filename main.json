@@ -1979,12 +1979,27 @@
          "imagewidth":640,
          "margin":0,
          "name":"cija_32x32_basic_CC0",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"CC0"
+                }],
          "spacing":0,
          "tilecount":600,
          "tileheight":32,
          "tiles":[
                 {
                  "id":0,
+                 "properties":[
+                        {
+                         "name":"tilesetCopyright",
+                         "type":"string",
+                         "value":"CC0"
+                        }]
+                }, 
+                {
+                 "id":176,
                  "properties":[
                         {
                          "name":"tilesetCopyright",

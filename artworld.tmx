@@ -866,8 +866,16 @@
   </tile>
  </tileset>
  <tileset firstgid="10222" name="cija_32x32_basic_CC0" tilewidth="32" tileheight="32" tilecount="600" columns="20">
+  <properties>
+   <property name="tilesetCopyright" value="CC0"/>
+  </properties>
   <image source="cija_32x32_basic_CC0.png" width="640" height="960"/>
   <tile id="0">
+   <properties>
+    <property name="tilesetCopyright" value="CC0"/>
+   </properties>
+  </tile>
+  <tile id="176">
    <properties>
     <property name="tilesetCopyright" value="CC0"/>
    </properties>
