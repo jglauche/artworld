@@ -1113,10 +1113,9 @@
  <group id="26" name="ext links" locked="1">
   <layer id="25" name="Mastodon" width="90" height="150" locked="1" opacity="0">
    <properties>
-    <property name="openTab" value="true"/>
     <property name="openWebsite" value="https://queer.af/web/@JennyFluff"/>
     <property name="openWebsiteTrigger" value="onaction"/>
-    <property name="openWebsiteTriggerMessage" value="press Spacebar to follow me on Fedi"/>
+    <property name="openWebsiteTriggerMessage" value="press Spacebar to follow me on Fedi  (Open Link in new Tab)"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1273,10 +1272,9 @@
   </layer>
   <layer id="27" name="Lyrilith" width="90" height="150" locked="1" opacity="0">
    <properties>
-    <property name="openTab" value="true"/>
     <property name="openWebsite" value="https://mastodon.art/@Lyrilith"/>
     <property name="openWebsiteTrigger" value="onaction"/>
-    <property name="openWebsiteTriggerMessage" value="press Spacebar to follow Lyrilith on Fediverse"/>
+    <property name="openWebsiteTriggerMessage" value="press Spacebar to follow Lyrilith on Fediverse  (Open Link in new Tab)"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1433,10 +1431,9 @@
   </layer>
   <layer id="19" name="kittenmews" width="90" height="150" locked="1" opacity="0">
    <properties>
-    <property name="openTab" value="true"/>
     <property name="openWebsite" value="https://kittenme.ws/art/gallery"/>
     <property name="openWebsiteTrigger" value="onaction"/>
-    <property name="openWebsiteTriggerMessage" value="press Spacebar to open the JennyFluffs gallery"/>
+    <property name="openWebsiteTriggerMessage" value="press Spacebar to open the JennyFluffs gallery  (Open Link in new Tab)"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1593,10 +1590,9 @@
   </layer>
   <layer id="18" name="gh url" width="90" height="150" locked="1" opacity="0">
    <properties>
-    <property name="openTab" value="true"/>
     <property name="openWebsite" value="https://github.com/jglauche/artworld"/>
     <property name="openWebsiteTrigger" value="onaction"/>
-    <property name="openWebsiteTriggerMessage" value="Press Space to go to the Github Page you can pull request to"/>
+    <property name="openWebsiteTriggerMessage" value="Press Space to go to the Github Page you can pull request to (Open Link in new Tab)"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

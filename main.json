@@ -61,11 +61,6 @@
                  "opacity":0,
                  "properties":[
                         {
-                         "name":"openTab",
-                         "type":"string",
-                         "value":"true"
-                        }, 
-                        {
                          "name":"openWebsite",
                          "type":"string",
                          "value":"https:\/\/queer.af\/web\/@JennyFluff"
@@ -78,7 +73,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press Spacebar to follow me on Fedi"
+                         "value":"press Spacebar to follow me on Fedi  (Open Link in new Tab)"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -94,11 +89,6 @@
                  "opacity":0,
                  "properties":[
                         {
-                         "name":"openTab",
-                         "type":"string",
-                         "value":"true"
-                        }, 
-                        {
                          "name":"openWebsite",
                          "type":"string",
                          "value":"https:\/\/mastodon.art\/@Lyrilith"
@@ -111,7 +101,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press Spacebar to follow Lyrilith on Fediverse"
+                         "value":"press Spacebar to follow Lyrilith on Fediverse  (Open Link in new Tab)"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -127,11 +117,6 @@
                  "opacity":0,
                  "properties":[
                         {
-                         "name":"openTab",
-                         "type":"string",
-                         "value":"true"
-                        }, 
-                        {
                          "name":"openWebsite",
                          "type":"string",
                          "value":"https:\/\/kittenme.ws\/art\/gallery"
@@ -144,7 +129,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"press Spacebar to open the JennyFluffs gallery"
+                         "value":"press Spacebar to open the JennyFluffs gallery  (Open Link in new Tab)"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -160,11 +145,6 @@
                  "opacity":0,
                  "properties":[
                         {
-                         "name":"openTab",
-                         "type":"string",
-                         "value":"true"
-                        }, 
-                        {
                          "name":"openWebsite",
                          "type":"string",
                          "value":"https:\/\/github.com\/jglauche\/artworld"
@@ -177,7 +157,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press Space to go to the Github Page you can pull request to"
+                         "value":"Press Space to go to the Github Page you can pull request to (Open Link in new Tab)"
                         }],
                  "type":"tilelayer",
                  "visible":true,
