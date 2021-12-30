@@ -1549,19 +1549,15 @@
          "imagewidth":320,
          "margin":0,
          "name":"kawaiipunk - AntiFa Area No Copsz",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"CC0"
+                }],
          "spacing":0,
          "tilecount":80,
          "tileheight":32,
-         "tiles":[
-                {
-                 "id":0,
-                 "properties":[
-                        {
-                         "name":"tilesetCopyright",
-                         "type":"string",
-                         "value":"CC0"
-                        }]
-                }],
          "tilewidth":32
         }, 
         {
