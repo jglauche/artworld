@@ -1,0 +1,35 @@
+{
+  "name": "melonjs-es6-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Olivier Biot",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/register": "^7.16.5",
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.124",
+    "chokidar": "^3.5.2",
+    "copy-webpack-plugin": "^10.2.0",
+    "favicons": "^6.2.2",
+    "favicons-webpack-plugin": "^5.0.2",
+    "fs": "^0.0.1-security",
+    "html-webpack-plugin": "^5.5.0",
+    "swc-loader": "^0.1.15",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development --config webpack.config.js",
+    "build": "webpack --mode=production --config webpack.config.js"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "css-loader": "^6.5.1",
+    "melonjs": "^10.2.3",
+    "style-loader": "^3.3.1"
+  }
+}
