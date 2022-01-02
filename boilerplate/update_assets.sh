@@ -1,6 +1,6 @@
 
 
-data=$(find data/** -name *.png -o -name *.tmx -o -name *.fnt)
+data=$(find data/** -name \*.png -o -name \*.tmx -o -name \*.fnt -o -name \*.json)
 
 
 echo "const DataManifest = ["

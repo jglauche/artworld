@@ -11,7 +11,9 @@ class PlayScreen extends Stage {
 //        loader.preload( resources, function(){} );
 
 
-        level.load("artworld");
+        level.load("artworld", { setViewportBounds: true  });
+
+//        game.world.gravity=0;
 
         // add a font text display object
         game.world.addChild(new BitmapText(game.viewport.width / 2, game.viewport.height / 2,  {

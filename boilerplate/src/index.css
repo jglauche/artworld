@@ -1,8 +1,8 @@
 body {
 
     min-height: 100vh;
-    background-color: black;
-    color: white;
+    background-color: #ff00ff;
+    color: #00FF00;
 
     /* Allow mouse dragging. */
     -moz-user-select: none;
@@ -17,6 +17,7 @@ body {
 
     /* Allow canvas to hit the edges of the browser viewport. */
     margin: 0;
+    padding: 0;
 }
 
 .main {
@@ -24,3 +25,10 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+#screen canvas {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
