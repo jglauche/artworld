@@ -5,6 +5,8 @@ import TitleScreen from 'js/stage/title.js';
 import PlayScreen from 'js/stage/play.js';
 import PlayerEntity from 'js/renderables/player.js';
 import MapEntry from 'js/renderables/map_entry.js';
+import TextRenderer from 'js/renderables/text_renderer.js';
+
 
 
 import DataManifest from 'manifest.js';
@@ -45,9 +47,9 @@ me.device.onReady(() => {
 
 
       me.pool.register("entry", MapEntry);
-
-
+      me.pool.register("text", TextRenderer);
       me.pool.register("mainPlayer", PlayerEntity);
+
 
       // Start the game.
       me.state.change(me.state.PLAY);

@@ -1,4 +1,6 @@
 import { Entity, Sprite, Rect, game, input, collision } from 'melonjs/dist/melonjs.module.js';
+import TextRenderer from 'js/renderables/text_renderer.js';
+
 
 class PlayerEntity extends Entity {
     constructor(x, y, settings) {
@@ -8,8 +10,8 @@ class PlayerEntity extends Entity {
 
         super(x, y , settings);
         // max walking & jumping speed
-        this.body.setMaxVelocity(4.2, 4.2);
-        this.body.setFriction(0.1, 0.1);
+        this.body.setMaxVelocity(8.0, 8.0);
+        this.body.setFriction(1,1);
         this.body.force.set(0, 0);
         this.body.addShape(new Rect(0, 0, this.width, this.height));
         this.body.ignoreGravity = true;
@@ -18,7 +20,10 @@ class PlayerEntity extends Entity {
         this.renderable.addAnimation("walk",  [1, 5, 9]);
         this.renderable.addAnimation("stand",  [1]);
         this.renderable.setCurrentAnimation("stand");
-        // this.body.collisionType = collision.types.PLAYER_OBJECT;
+        this.body.collisionType = collision.types.PLAYER_OBJECT;
+        this.body.setCollisionMask(
+            collision.types.WORLD_SHAPE
+        );
         game.viewport.follow(this.pos, game.viewport.AXIS.BOTH, 0.4);
     }
 
@@ -85,9 +90,19 @@ class PlayerEntity extends Entity {
      * colision handler
      * (called when colliding with other objects)
      */
-    onCollision(response, other) {
-        // Make all other objects solid
-        return true;
+    onCollision(res, other) {
+      switch (res.b.body.collisionType) {
+        case collision.types.WORLD_SHAPE:
+          if (other.name == "text"){
+            document.getElementById("screenreader").innerHTML = other.stext;
+            return false;
+          } else {
+            // assume wall
+            return true;
+          }
+
+      }
+      return false;
     }
 };
 

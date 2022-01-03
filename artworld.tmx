@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="33" nextobjectid="9">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="37" nextobjectid="47">
  <editorsettings>
   <export target="main.js" format="js"/>
  </editorsettings>
@@ -518,6 +518,31 @@
   </properties>
   <image source="kawaiipunk - self portrait.png" width="341" height="256"/>
  </tileset>
+ <objectgroup id="35" name="collision" visible="0">
+  <object id="11" x="0" y="4768" width="2880" height="32"/>
+  <object id="13" x="0" y="0" width="32" height="4800"/>
+  <object id="14" x="2848" y="0" width="32" height="4800"/>
+  <object id="15" x="0" y="0" width="2880" height="32"/>
+  <object id="16" x="32" y="1344" width="896" height="384"/>
+  <object id="18" x="928" y="1344" width="288" height="288"/>
+  <object id="19" x="1024" y="1632" width="192" height="96"/>
+  <object id="20" x="1344" y="1632" width="384" height="96"/>
+  <object id="21" x="1664" y="1728" width="64" height="96"/>
+  <object id="22" x="1664" y="1920" width="64" height="1280"/>
+  <object id="23" x="1472" y="3360" width="288" height="384"/>
+  <object id="24" x="1024" y="3680" width="448" height="64"/>
+  <object id="25" x="32" y="3424" width="896" height="320"/>
+  <object id="26" x="1504" y="4448" width="256" height="320"/>
+  <object id="27" x="1504" y="3680" width="256" height="672"/>
+  <object id="28" x="32" y="2848" width="896" height="64"/>
+  <object id="29" x="1024" y="2848" width="640" height="64"/>
+  <object id="30" x="1216" y="1664" width="32" height="64"/>
+  <object id="31" x="928" y="1632" width="32" height="32"/>
+  <object id="32" x="992" y="1632" width="32" height="32"/>
+  <object id="33" x="992" y="1664" width="32" height="32"/>
+  <object id="34" x="928" y="1664" width="32" height="32"/>
+  <object id="35" x="960" y="1632" width="32" height="32"/>
+ </objectgroup>
  <layer id="16" name="Floor" width="90" height="150" locked="1">
   <data encoding="csv">
 1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,1223,1224,
@@ -980,7 +1005,7 @@
 1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,9413,9433,9453,9452,9432,9433,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201
 </data>
  </layer>
- <layer id="4" name="image overlay" width="90" height="150">
+ <layer id="4" name="image overlay" width="90" height="150" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2719,7 +2744,35 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="32" name="testlayer">
+ <objectgroup id="32" name="doors">
   <object id="7" name="entry" x="77" y="4400" width="13" height="7.75"/>
+ </objectgroup>
+ <objectgroup id="36" name="texts">
+  <object id="36" name="text" x="147" y="4170" width="156" height="21">
+   <properties>
+    <property name="color" value="#e8d4d6"/>
+    <property name="slug" value="✓ Meow"/>
+   </properties>
+  </object>
+  <object id="40" name="text" x="147" y="4233.75" width="156" height="22">
+   <properties>
+    <property name="color" value="#fe0db1"/>
+    <property name="slug" value="welcome!"/>
+   </properties>
+  </object>
+  <object id="44" name="text" x="147" y="4298" width="157" height="22">
+   <properties>
+    <property name="color" value="#ffffff"/>
+    <property name="slug" value="meoooooooooooooooooooooooooow"/>
+   </properties>
+  </object>
+  <object id="45" name="text" x="203" y="4351" width="243" height="94">
+   <properties>
+    <property name="color" value="#fe0db1"/>
+    <property name="slug">Beep
+Beep.
+Meowtiline support!</property>
+   </properties>
+  </object>
  </objectgroup>
 </map>
