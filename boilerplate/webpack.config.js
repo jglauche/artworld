@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          { loader: 'style-loader', options: { injectType: "linkTag" } },
+          { loader: 'style-loader', options: { injectType: "singletonStyleTag", insert: "head" } },
           'css-loader'
         ]
       }
