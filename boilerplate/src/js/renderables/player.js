@@ -1,12 +1,11 @@
-import { Entity, Rect, game, input, collision } from 'melonjs/dist/melonjs.module.js';
+import { Entity, Sprite, Rect, game, input, collision } from 'melonjs/dist/melonjs.module.js';
 
 class PlayerEntity extends Entity {
-
-    /**
-     * constructor
-     */
     constructor(x, y, settings) {
-        // call the parent constructor
+        settings.width = 16;
+        settings.height = 32;
+        settings.image = "sample_character_06";
+
         super(x, y , settings);
         // max walking & jumping speed
         this.body.setMaxVelocity(4.2, 4.2);
@@ -16,8 +15,8 @@ class PlayerEntity extends Entity {
         this.body.ignoreGravity = true;
 
         this.alwaysUpdate = true;
-        this.renderable.addAnimation("walk",  [0, 1, 2, 3, 4, 5, 6, 7]);
-        this.renderable.addAnimation("stand",  [0]);
+        this.renderable.addAnimation("walk",  [1, 5, 9]);
+        this.renderable.addAnimation("stand",  [1]);
         this.renderable.setCurrentAnimation("stand");
         // this.body.collisionType = collision.types.PLAYER_OBJECT;
         game.viewport.follow(this.pos, game.viewport.AXIS.BOTH, 0.4);

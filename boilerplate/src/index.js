@@ -4,6 +4,8 @@ import 'index.css';
 import TitleScreen from 'js/stage/title.js';
 import PlayScreen from 'js/stage/play.js';
 import PlayerEntity from 'js/renderables/player.js';
+import MapEntry from 'js/renderables/map_entry.js';
+
 
 import DataManifest from 'manifest.js';
 
@@ -41,7 +43,10 @@ me.device.onReady(() => {
 //      me.state.set(me.state.MENU, new TitleScreen());
       me.state.set(me.state.PLAY, new PlayScreen());
 
-      // add our player entity in the entity pool
+
+      me.pool.register("entry", MapEntry);
+
+
       me.pool.register("mainPlayer", PlayerEntity);
 
       // Start the game.
