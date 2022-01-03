@@ -6,6 +6,8 @@ import PlayScreen from 'js/stage/play.js';
 import PlayerEntity from 'js/renderables/player.js';
 import MapEntry from 'js/renderables/map_entry.js';
 import TextRenderer from 'js/renderables/text_renderer.js';
+import Artwork from 'js/renderables/artwork.js';
+
 
 
 
@@ -48,7 +50,8 @@ me.device.onReady(() => {
 
       me.pool.register("entry", MapEntry);
       me.pool.register("text", TextRenderer);
-      me.pool.register("mainPlayer", PlayerEntity);
+      me.pool.register("artwork", Artwork);
+       me.pool.register("mainPlayer", PlayerEntity);
 
 
       // Start the game.

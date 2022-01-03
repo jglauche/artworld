@@ -42,8 +42,8 @@ class TextRenderer extends Entity {
     this.text = text;
     this.body.collisionType = collision.types.WORLD_SHAPE;
     this.body.ignoreGravity=true;
-    this.body.x = text.pos.x;
-    this.body.y = text.pos.y;
+//    this.body.x = text.pos.x;
+ //   this.body.y = text.pos.y;
     console.log(this);
 
     game.world.addChild(text);
