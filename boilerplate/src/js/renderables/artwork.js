@@ -5,6 +5,10 @@ class Artwork extends Entity{
     var slug = settings.slug;
     super(x, y, settings);
     settings.image = loader.getImage(slug);
+    if (settings.image == null) {
+      console.error("cannot find image for slug " + slug);
+      return false;
+    }
     settings.repeat = 'no-repeat';
     this.renderable = new ImageLayer(0,0, settings);
 
