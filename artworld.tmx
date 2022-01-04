@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="41" nextobjectid="91">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="41" nextobjectid="94">
  <editorsettings>
   <export target="main.js" format="js"/>
  </editorsettings>
@@ -831,7 +831,7 @@
 1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,7993,8013,8033,8032,8012,8013,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201,1201
 </data>
  </layer>
- <layer id="4" name="image overlay" width="90" height="150">
+ <layer id="4" name="image overlay" width="90" height="150" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2576,28 +2576,32 @@
  <objectgroup id="36" name="texts">
   <object id="36" name="text" x="147" y="4170" width="156" height="21">
    <properties>
-    <property name="color" value="#e8d4d6"/>
-    <property name="slug" value="✓ Meow"/>
+    <property name="color" value="#9209db"/>
+    <property name="slug" value="fluid-art-sign"/>
    </properties>
   </object>
   <object id="40" name="text" x="147" y="4233.75" width="156" height="22">
    <properties>
-    <property name="color" value="#fe0db1"/>
-    <property name="slug" value="welcome!"/>
+    <property name="color" value="#9209db"/>
+    <property name="slug" value="by-jennyfluff"/>
    </properties>
   </object>
   <object id="44" name="text" x="147" y="4298" width="157" height="22">
    <properties>
-    <property name="color" value="#ffffff"/>
-    <property name="slug" value="meoooooooooooooooooooooooooow"/>
+    <property name="color" value="#ee3aff"/>
+    <property name="slug" value="and-guests"/>
    </properties>
   </object>
   <object id="45" name="text" x="203" y="4351" width="243" height="94">
    <properties>
     <property name="color" value="#fe0db1"/>
-    <property name="slug">Beep
-Beep.
-Meowtiline support!</property>
+    <property name="slug" value="i18n-works"/>
+   </properties>
+  </object>
+  <object id="93" name="text" x="147" y="4458" width="157" height="23">
+   <properties>
+    <property name="color" value="#38ec0a"/>
+    <property name="slug" value="walk-on-art"/>
    </properties>
   </object>
  </objectgroup>

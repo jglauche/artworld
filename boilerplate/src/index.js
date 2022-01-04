@@ -7,9 +7,7 @@ import PlayerEntity from 'js/renderables/player.js';
 import MapEntry from 'js/renderables/map_entry.js';
 import TextRenderer from 'js/renderables/text_renderer.js';
 import Artwork from 'js/renderables/artwork.js';
-
-
-
+import Fluent from 'js/plugin/fluent/fluent.js';
 
 import DataManifest from 'manifest.js';
 
@@ -33,6 +31,7 @@ me.device.onReady(() => {
 */
       // allow cross-origin for image/texture loading
   me.loader.crossOrigin = "anonymous";
+  me.plugin.register(Fluent, "fluent");
 
   me.input.bindKey(me.input.KEY.D, "right");
   me.input.bindKey(me.input.KEY.A, "left");
@@ -51,8 +50,7 @@ me.device.onReady(() => {
       me.pool.register("entry", MapEntry);
       me.pool.register("text", TextRenderer);
       me.pool.register("artwork", Artwork);
-       me.pool.register("mainPlayer", PlayerEntity);
-
+      me.pool.register("mainPlayer", PlayerEntity);
 
       // Start the game.
       me.state.change(me.state.PLAY);

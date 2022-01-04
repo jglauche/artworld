@@ -17,7 +17,6 @@ class Artwork extends Entity{
 
     this.stext = "Image: "+ slug;
     this.name="artwork";
-    console.log(this);
   }
 
   onCollision(){

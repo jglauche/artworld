@@ -29,7 +29,11 @@ module.exports = {
           { loader: 'style-loader', options: { injectType: "singletonStyleTag", insert: "head" } },
           'css-loader'
         ]
-      }
+      },
+      {
+        test: /\.ftl$/,
+        use: "fluent-loader",
+      },
     ]
   },
   plugins: [

@@ -28,7 +28,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@fluent/bundle": "^0.17.1",
+    "@fluent/dom": "^0.8.1",
     "css-loader": "^6.5.1",
+    "fluent-loader": "^1.0.1",
     "melonjs": "^10.2.3",
     "style-loader": "^3.3.1"
   }

@@ -1,12 +1,15 @@
-import { Stage, loader, level, game, ColorLayer, BitmapText  } from 'melonjs/dist/melonjs.module.js';
+
+import { plugins, plugin, Stage, loader, level, game, ColorLayer, BitmapText  } from 'melonjs/dist/melonjs.module.js';
 import PlayerEntity from 'js/renderables/player.js';
 import MapEntry from 'js/renderables/map_entry.js';
 
-
-
 class PlayScreen extends Stage {
   onResetEvent() {
-    level.load("artworld", { setViewportBounds: true });
+    var level_name = "artworld";
+    plugins.fluent.set_level(level_name);
+
+    level.load(level_name, { setViewportBounds: true });
+
 
 /*
     var lvl = level.getCurrentLevel().layers.find(layer => layer.name == "collisionLayer");
