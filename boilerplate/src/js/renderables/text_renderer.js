@@ -1,6 +1,4 @@
 import { plugins, Bounds, collision, game, video, Text, BitmapText, Color, Entity  } from 'melonjs/dist/melonjs.module.js';
-import {FluentBundle, FluentResource} from "@fluent/bundle";
-import en from "/data/map/artworld.ftl";
 
 
 class TextRenderer extends Entity {
