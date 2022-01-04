@@ -12,19 +12,9 @@ class TextRenderer extends Entity {
     var color = settings.color;
 
     var slug = settings.slug;
-    plugins.fluent.get_slug(slug).then(stext => {
-      if (typeof(stext) == 'string'){
-        var parts = [stext];
-        this.stext = stext;
-      } else {
-        console.log(stext);
-        this.stext = stext.join("");
-        var parts = stext.filter(x => x != "\n");
-      }
-
+    plugins.fluent.get_slug(slug).then(parts => {
       var lines = parts.length;
-      console.log(lines);
-
+      this.stext = parts.join("\n");
 
       var size = Math.floor(settings.height / lines);
 

@@ -40,15 +40,26 @@ class Fluent extends me.plugin.Base{
     if (this.lock) await new Promise(resolve => bus.once('unlocked', resolve));
   }
 
-  async get_slug(slug){
+  fmt(stext){
+    var parts = [];
+    if (typeof(stext) == 'string'){
+      parts = [stext];
+    } else {
+      parts = stext.filter(x => x != "\n");
+    }
+    return parts
+  }
+
+  async get_slug(slug, ret_slug = true){
     return (this.rdy()).then(a => {
       let msg = this.bundle.getMessage(slug)
       if (msg != undefined) {
-        return msg.value
+        return this.fmt(msg.value)
       }
-      return slug
-  });
-
+      if (ret_slug){
+        return this.fmt(slug)
+      } else { return [] }
+    });
   }
 
   test(){

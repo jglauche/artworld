@@ -93,13 +93,17 @@ class PlayerEntity extends Entity {
     onCollision(res, other) {
       switch (res.b.body.collisionType) {
         case collision.types.WORLD_SHAPE:
-          console.log(other.name);
+          // console.log(other.name);
           switch (other.name){
             case "text":
-              document.getElementById("screenreader").innerHTML = other.stext;
+              document.getElementById("title").innerHTML = other.stext;
               return false;
             case "artwork":
-              document.getElementById("screenreader").innerHTML = other.stext;
+              document.getElementById("title").innerHTML = other.stext;
+              document.getElementById("description").innerHTML = other.description;
+              document.getElementById("link").innerHTML = other.link;
+              document.getElementById("author").innerHTML = other.author;
+              document.getElementById("licence").innerHTML = other.licence;
               return false;
             }
             // assume wall otherwise
