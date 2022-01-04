@@ -31,15 +31,27 @@ class Artwork extends Entity{
     plugins.fluent.get_slug(slug+"-author", false).then(txt => {
       this.author = txt.join("");
     });
+    plugins.fluent.get_slug(slug+"-surface", false).then(txt => {
+      this.surface = txt.join("");
+    });
+    plugins.fluent.get_slug(slug+"-size", false).then(txt => {
+      this.size = txt.join("");
+    });
+
   }
 
-  link(url){
-    return "<a href='"+url+"' target='_blank'>Link</a>"
+  link(url, text="Link"){
+    if (url != ""){
+      return "<a href='"+url+"' target='_blank'><button class='link'>"+text+"</button></a>"
+    } else {
+      return "";
+    }
   }
 
   onCollision(){
     return false;
   }
+
   onBodyUpdate(body) {
       // update the entity bounds to include the body bounds
       this.getBounds().addBounds(body.getBounds(), true);

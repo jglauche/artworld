@@ -97,6 +97,12 @@ class PlayerEntity extends Entity {
           switch (other.name){
             case "text":
               document.getElementById("title").innerHTML = other.stext;
+              document.getElementById("description").innerHTML = "";
+              document.getElementById("link").innerHTML = "";
+              document.getElementById("author").innerHTML = "";
+              document.getElementById("licence").innerHTML = "";
+              document.getElementById("surface").innerHTML = "";
+              document.getElementById("size").innerHTML = "";
               return false;
             case "artwork":
               document.getElementById("title").innerHTML = other.stext;
@@ -104,6 +110,8 @@ class PlayerEntity extends Entity {
               document.getElementById("link").innerHTML = other.link;
               document.getElementById("author").innerHTML = other.author;
               document.getElementById("licence").innerHTML = other.licence;
+              document.getElementById("surface").innerHTML = other.surface;
+              document.getElementById("size").innerHTML = other.size;
               return false;
             }
             // assume wall otherwise

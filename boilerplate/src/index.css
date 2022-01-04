@@ -1,26 +1,75 @@
 body {
 
     min-height: 100vh;
-    background-color: #darkgrey;
-
-    /* Allow canvas to hit the edges of the browser viewport. */
+    background-color: #eeeef0;
     margin: 0;
     padding: 0;
 }
-.footer {
-   margin-bottom: 10px;
-
+.sidebar {
+  width: 12% !important;
+  justify-content: flex-end;
+  margin: 0 5px 0 10px;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+}
+.screen{
+  flex-shrink: 1;
 }
 
 #screen canvas {
+  width: 100% !important;
+  flex-shrink: 1;
   padding: 0;
   margin: 0;
-  display: block;
 }
 
+.card {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h3{
+  margin-block-end: 0.1em;
+}
+
+header{
+  text-align: center;
+}
+.link{
+  width: 100%;
+  font-weight: bold;
+  background-color: #5bacf1;
+  border-color: #0062cc;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 4px;
+  border-radius: 5px;
+}
+.link:hover{
+  background-color: #0069d9;
+}
+#author{
+  background-color: #a937cd;
+  color: #ffffff;
+  margin-top: 0px;
+  text-align: center;
+}
+#surface{
+  font: smaller;
+}
+#size{
+  font: smaller;
+}
+#description{
+  padding: 5px 0px 0px 0px;
+}
