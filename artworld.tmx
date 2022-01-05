@@ -2713,22 +2713,22 @@
   </object>
   <object id="87" name="artwork" x="2112" y="2304" width="320" height="256">
    <properties>
-    <property name="slug" value="kawaiipunk - AntiFa Area No Copsz"/>
+    <property name="slug" value="kawaiipunk_AntiFa_Area_No_Copsz"/>
    </properties>
   </object>
   <object id="88" name="artwork" x="1760" y="2304" width="320" height="256">
    <properties>
-    <property name="slug" value="kawaiipunk - London"/>
+    <property name="slug" value="kawaiipunk_london"/>
    </properties>
   </object>
   <object id="89" name="artwork" x="2112" y="2016" width="320" height="256">
    <properties>
-    <property name="slug" value="kawaiipunk - self portrait"/>
+    <property name="slug" value="kawaiipunk_self_portrait"/>
    </properties>
   </object>
   <object id="90" name="artwork" x="1760" y="2016" width="320" height="256">
    <properties>
-    <property name="slug" value="kawaiipunk - brutualistpunk"/>
+    <property name="slug" value="kawaiipunk_brutualistpunk"/>
    </properties>
   </object>
  </objectgroup>

@@ -83,7 +83,7 @@ km_115 =
   .size = 50x40cm
 
 km_122 =
-  .name = Slug Dance
+  .title = Slug Dance
   .desc = Two slugs, one blue-purple and one red-ish-purple, wrapped aroudn each other.
     There's a green background mostly to the top/left and a purple-to-red background to the right
   .author = JennyFluff
@@ -128,6 +128,24 @@ km_127 =
   .surface = canvas
   .size = 25x25cm
 
+km_132 =
+  .title = Rift Through Space
+  .desc = Abstract art with purple, white, black and grey colors. A white-purple vortex joining together form top left into the middle going towards the right.
+    The painting is predominately purple on the left, on the right it's mostly black with a transition into via grey. There are multiple cells of various colors, but mostly black
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/132
+  .surface = canvas
+  .size = 24x30cm
+
+km_133 =
+  .title = Colors in the Dark Places
+  .desc = Abstract art with purple, white, black and grey colors and cells.
+    A dark corner on the lower left spans over the entire height of the painting. The corner is not completely dark and there is a dark red sky in the background.
+    There is a ripple that could be seen as a path from the lower right, that partially moves into the dark corner but leads away to the dark-red top right.
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/133
+  .surface = canvas
+  .size = 24x30cm
 
 km_134 =
   .title = Dragon Drop
@@ -174,6 +192,91 @@ km_138 =
   .link = https://kittenme.ws/art/gallery/138
   .surface = canvas
   .size = 30x30cm
+
+km_140 =
+  .title = River of Cells
+  .desc = A river of blue-grey-ish, almost white cells flowing in kinda of a funnel shape towards the lower right.
+    Many other cells are also towards its opening in red and copper-brown cells, surrounded by red areas.
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/140
+  .surface = canvas
+  .size = 40x30cm
+
+km_141 =
+  .title = End of Time and Space
+  .desc = Paint stretches in circular movements in red, yellow and purple colors with no apparent order.
+    Name inspired by an Doctor Epsiode where an exploding TARDIS is depicted.
+    On a long, narrow canvas.
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/141
+  .surface = canvas
+  .size = 20x60cm
+
+km_142 =
+  .title = Traaaaaans
+  .desc = Airbrush art of a trans flag with a big flag and a small flag going from bottom left to top right.
+    The smaller one goes along the top left corner and has a bunch of drops of blue paint on the white and pink areas.
+    The underlying structure has random mountains that follow the flow of the pride flags displayed.
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/142
+  .surface = canvas
+  .size = 24x30
+
+
+p5t_star =
+  .author = p5t
+  .desc = TODO
+
+foorbie_riss =
+  .title = Riss
+  .desc = TODO
+  .author = Foorbie
+
+foorbie_briefumschlag =
+  .title = Briefumschlag
+  .desc = TODO
+  .author = Foorbie
+
+foorbie_orchidee =
+  .title = Orchidee
+  .desc = TODO
+  .author = Foorbie
+
+lyrilith_83cc92e895a4fcfb =
+  .desc = TODO
+  .author = Lyrilith
+  .link = https://mastodon.art/@Lyrilith
+
+lyrilith_c90963e341da1cec =
+  .desc = TODO
+  .author = Lyrilith
+  .link = https://mastodon.art/@Lyrilith
+
+kawaiipunk_AntiFa_Area_No_Copsz =
+  .title =  AntiFa Area No Copsz
+  .desc = TODO
+  .author = kawaiipunk
+  .link = https://sunbeam.city/@kawaiipunk
+
+kawaiipunk_brutualistpunk =
+  .title = Brutualistpunk
+  .desc = TODO
+  .author = kawaiipunk
+  .link = https://sunbeam.city/@kawaiipunk
+
+kawaiipunk_london =
+  .title = London
+  .desc = TODO
+  .author = kawaiipunk
+  .link = https://sunbeam.city/@kawaiipunk
+
+
+kawaiipunk_self_portrait =
+  .title = Self Portrait
+  .desc = TODO
+  .author = kawaiipunk
+  .link = https://sunbeam.city/@kawaiipunk
+
 
 
 

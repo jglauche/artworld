@@ -121,14 +121,6 @@
   <object id="5" x="-9" y="-9" width="785" height="13"/>
   <object id="6" x="-24" y="-27" width="24" height="806"/>
  </objectgroup>
- <objectgroup id="2" name="doors">
-  <object id="1" name="entry" x="233" y="99" width="84" height="67"/>
-  <object id="2" name="exit" x="704" y="287" width="31" height="64">
-   <properties>
-    <property name="to" value="artworld"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="7" name="texts">
   <object id="8" name="text" x="294" y="261" width="222" height="54">
    <properties>
@@ -152,6 +144,14 @@
    <properties>
     <property name="color" value="#e1183d"/>
     <property name="slug" value="empty"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="doors" locked="1">
+  <object id="1" name="entry" x="233" y="99" width="84" height="67"/>
+  <object id="2" name="exit" x="704" y="287" width="31" height="64">
+   <properties>
+    <property name="to" value="artworld"/>
    </properties>
   </object>
  </objectgroup>
