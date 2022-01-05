@@ -1,16 +1,19 @@
 import { Entity, Sprite, Rect, game, level, input, collision } from 'melonjs/dist/melonjs.module.js';
+import {Socket, Manager, io} from "socket.io-client";
 import TextRenderer from 'js/renderables/text_renderer.js';
 import MapEntry from 'js/renderables/map_entry.js';
+import MultiPlayer from 'js/renderables/multiplayer.js';
 
 class PlayerEntity extends Entity {
     constructor(x, y, settings) {
         settings.width = 16;
         settings.height = 32;
         settings.image = "sample_character_06";
+        let img = settings.image;
 
         super(x, y , settings);
         // max walking & jumping speed
-
+        this.image = img;
         this.body.setMaxVelocity(8.0, 8.0);
         this.body.setFriction(1,1);
         this.body.force.set(0, 0);
@@ -26,6 +29,21 @@ class PlayerEntity extends Entity {
             collision.types.WORLD_SHAPE
         );
         game.viewport.follow(this.pos, game.viewport.AXIS.BOTH, 0.4);
+        this.level = level.getCurrentLevelId();
+        this.last_x = this.pos.x;
+        this.last_y = this.pos.y;
+//        this.manager = new Manager('http://localhost:3000/');
+        //this.socket = this.manager.socket("/"+this.level);
+        this.socket = io("http://localhost:3000");
+        this.socket.emit("level", [this.level, this.image, this.pos.x, this.pos.y, this.pos.x]);
+        // TODO: need to get already connected players
+        this.socket.on("new_player", ([socketid, image, x, y, z]) => {
+          console.log("create new player with socketid" + socketid);
+          let mp = new MultiPlayer(x, y, {image: image, sid: socketid, socket: this.socket});
+          game.world.addChild(mp, z);
+        });
+        // TODO: needs to handle disconnects
+
        // console.log("player was created");
     }
     /**
@@ -34,6 +52,8 @@ class PlayerEntity extends Entity {
     update(dt) {
         var keypress = 0;
         if (input.isKeyPressed('debug')){
+          this.socket.emit("msg", "beep");
+
           keypress = 1;
           console.log(this);
         }
@@ -86,7 +106,11 @@ class PlayerEntity extends Entity {
             // change to the standing animation
             this.renderable.setCurrentAnimation("stand");
         }
-
+        if (this.last_x != this.pos.x || this.last_y != this.pos.y){
+          this.last_x = this.pos.x;
+          this.last_y = this.pos.y;
+          this.socket.emit("move", [this.level, this.pos.x, this.pos.y]);
+        }
         return (super.update(dt) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
     }
 

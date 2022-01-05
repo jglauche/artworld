@@ -12,9 +12,7 @@ import Fluent from 'js/plugin/fluent/fluent.js';
 
 import DataManifest from 'manifest.js';
 
-
 me.device.onReady(() => {
-
   // initialize the display canvas once the device/browser is ready
   if (!me.video.init(600, 480, {parent : "screen", renderer: me.video.CANVAS, scale : 1, scaleMethod: 'flex', consoleHeader: true, doubleBuffering: false})) {
       alert("Your browser does not support HTML5 canvas.");
