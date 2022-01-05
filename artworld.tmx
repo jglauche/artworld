@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="41" nextobjectid="101">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="41" nextobjectid="103">
  <editorsettings>
   <export target="main.js" format="js"/>
  </editorsettings>
@@ -2570,62 +2570,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="36" name="texts">
-  <object id="36" name="text" x="147" y="4170" width="156" height="21">
-   <properties>
-    <property name="color" value="#9209db"/>
-    <property name="slug" value="fluid-art-sign"/>
-   </properties>
-  </object>
-  <object id="40" name="text" x="147" y="4233.75" width="156" height="22">
-   <properties>
-    <property name="color" value="#9209db"/>
-    <property name="slug" value="by-jennyfluff"/>
-   </properties>
-  </object>
-  <object id="44" name="text" x="147" y="4298" width="157" height="22">
-   <properties>
-    <property name="color" value="#ee3aff"/>
-    <property name="slug" value="and-guests"/>
-   </properties>
-  </object>
-  <object id="45" name="text" x="33" y="4355" width="243" height="94">
-   <properties>
-    <property name="color" value="#fe0db1"/>
-    <property name="slug" value="rc3-artworld"/>
-   </properties>
-  </object>
-  <object id="93" name="text" x="147" y="4458" width="157" height="23">
-   <properties>
-    <property name="color" value="#38ec0a"/>
-    <property name="slug" value="all-creatures-welcome"/>
-   </properties>
-  </object>
-  <object id="94" name="text" x="146" y="4522" width="156" height="22">
-   <properties>
-    <property name="color" value="#38ec0a"/>
-    <property name="slug" value="walk-on-art"/>
-   </properties>
-  </object>
-  <object id="95" name="text" x="147" y="4586" width="156" height="22">
-   <properties>
-    <property name="color" value="#38ec0a"/>
-    <property name="slug" value="sit-on-art"/>
-   </properties>
-  </object>
-  <object id="96" name="text" x="147" y="4650" width="156" height="22">
-   <properties>
-    <property name="color" value="#38ec0a"/>
-    <property name="slug" value="touch-art"/>
-   </properties>
-  </object>
-  <object id="97" name="text" x="147" y="4714" width="156" height="22">
-   <properties>
-    <property name="color" value="#ff0000"/>
-    <property name="slug" value="dont-nft"/>
-   </properties>
-  </object>
- </objectgroup>
  <objectgroup id="37" name="gallery">
   <object id="48" name="artwork" x="384" y="4448" width="256" height="192">
    <properties>
@@ -2785,6 +2729,62 @@
   <object id="90" name="artwork" x="1760" y="2016" width="320" height="256">
    <properties>
     <property name="slug" value="kawaiipunk - brutualistpunk"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="36" name="texts">
+  <object id="36" name="text" x="147" y="4170" width="156" height="21">
+   <properties>
+    <property name="color" value="#9209db"/>
+    <property name="slug" value="fluid-art-sign"/>
+   </properties>
+  </object>
+  <object id="40" name="text" x="147" y="4233.75" width="156" height="22">
+   <properties>
+    <property name="color" value="#9209db"/>
+    <property name="slug" value="by-jennyfluff"/>
+   </properties>
+  </object>
+  <object id="44" name="text" x="147" y="4298" width="157" height="22">
+   <properties>
+    <property name="color" value="#ee3aff"/>
+    <property name="slug" value="and-guests"/>
+   </properties>
+  </object>
+  <object id="45" name="text" x="33" y="4355" width="243" height="94">
+   <properties>
+    <property name="color" value="#fe0db1"/>
+    <property name="slug" value="rc3-artworld"/>
+   </properties>
+  </object>
+  <object id="93" name="text" x="147" y="4458" width="157" height="23">
+   <properties>
+    <property name="color" value="#38ec0a"/>
+    <property name="slug" value="all-creatures-welcome"/>
+   </properties>
+  </object>
+  <object id="94" name="text" x="146" y="4522" width="156" height="22">
+   <properties>
+    <property name="color" value="#38ec0a"/>
+    <property name="slug" value="walk-on-art"/>
+   </properties>
+  </object>
+  <object id="95" name="text" x="147" y="4586" width="156" height="22">
+   <properties>
+    <property name="color" value="#38ec0a"/>
+    <property name="slug" value="sit-on-art"/>
+   </properties>
+  </object>
+  <object id="96" name="text" x="147" y="4650" width="156" height="22">
+   <properties>
+    <property name="color" value="#38ec0a"/>
+    <property name="slug" value="touch-art"/>
+   </properties>
+  </object>
+  <object id="97" name="text" x="147" y="4714" width="156" height="22">
+   <properties>
+    <property name="color" value="#ff0000"/>
+    <property name="slug" value="dont-nft"/>
    </properties>
   </object>
  </objectgroup>

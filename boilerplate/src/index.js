@@ -47,8 +47,8 @@ me.device.onReady(() => {
 
     // set the user defined game stages
 //      me.state.set(me.state.MENU, new TitleScreen());
-//       me.state.set(me.state.PLAY, new PlayScreen("lobby"));
-      me.state.set(me.state.PLAY, new PlayScreen("artworld"));
+      me.state.set(me.state.PLAY, new PlayScreen("lobby"));
+//      me.state.set(me.state.PLAY, new PlayScreen("artworld"));
 
 
 

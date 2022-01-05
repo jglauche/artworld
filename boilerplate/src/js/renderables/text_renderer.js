@@ -8,7 +8,6 @@ class TextRenderer extends Entity {
     // var color = new Color(255,100,123, 1);
     this.body.collisionType = collision.types.WORLD_SHAPE;
     this.body.ignoreGravity=true;
-
     var color = settings.color;
 
     var slug = settings.slug;
@@ -31,7 +30,6 @@ class TextRenderer extends Entity {
 
       text.pos.x = x+settings.width/2.0;
       text.pos.y = y+settings.height;
-      text.pos.z = 5;
       while (text.getBounds().width > settings.width && size > 7) {
         size -= 1;
         text.pos.y -= 0.5;
@@ -40,11 +38,8 @@ class TextRenderer extends Entity {
       }
       this.text = text;
       this.text.autoTransform = true;
-     //    this.body.x = text.pos.x;
-   //   this.body.y = text.pos.y;
 
-
-      game.world.addChild(text);
+      game.world.addChild(text, settings.z);
       return this;
     });
   }

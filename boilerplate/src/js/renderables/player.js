@@ -26,7 +26,7 @@ class PlayerEntity extends Entity {
             collision.types.WORLD_SHAPE
         );
         game.viewport.follow(this.pos, game.viewport.AXIS.BOTH, 0.4);
-        // console.log("player was created");
+       // console.log("player was created");
     }
     /**
      * update the entity
