@@ -4,53 +4,52 @@ import PlayerEntity from 'js/renderables/player.js';
 import MapEntry from 'js/renderables/map_entry.js';
 
 class PlayScreen extends Stage {
-  constructor(x){
-    super(x);
+  constructor(lvl){
+    super();
+    this.level = lvl;
   }
 
   onResetEvent() {
-    var level_name = "artworld";
-    plugins.fluent.set_level(level_name);
+    plugins.fluent.set_level(this.level);
 
-    level.load(level_name, { setViewportBounds: true });
+    level.load(this.level, { setViewportBounds: true });
 
-    let entry = game.world.getChildByType(MapEntry);
-
-    // NOTE: might add something to add a random point in the rect
-    var player = new PlayerEntity(entry[0].pos.x, entry[0].pos.y, { image: 'sample_character_06' });
-
-    game.world.addChild(player);
     input.registerPointerEvent('wheel', game.viewport, function(e){
         if (e.event.deltaY < 0){ // up, scroll in
           var viewport = game.viewport;
-          viewport.currentTransform.translate(
+          /*viewport.currentTransform.translate(
               viewport.width * viewport.anchorPoint.x,
               viewport.height * viewport.anchorPoint.y
           );
-          viewport.currentTransform.scale(1.00);
+          viewport.currentTransform.scale(1.05);
           viewport.currentTransform.translate(
               -viewport.width * viewport.anchorPoint.x,
               -viewport.height * viewport.anchorPoint.y
           );
-          game.viewport.resize(game.viewport.width, game.viewport.height)
+          game.viewport.resize(game.viewport.width-10, game.viewport.height-10)
+          */
         } else {
         }
 //      console.log(e.event);
 
     });
 
-
-    // add a font text display object
-    game.world.addChild(new BitmapText(game.viewport.width / 2, game.viewport.height / 2,  {
-      font : "PressStart2P",
-      size : 1.0,
-      textBaseline : "middle",
-      textAlign : "center",
-      text : "Artworld.city"
-    }));
   }
 
+  onDestroyEvent(){
+    console.log("play stage was destroyed");
+  }
 
+  update(dt){
+    var isDirty = game.world.update(dt);
+
+    this.cameras.forEach(function(camera) {
+      if (camera.update(dt)) {
+        isDirty = true;
+      };
+    });
+    return isDirty;
+  }
 };
 
 export default PlayScreen;

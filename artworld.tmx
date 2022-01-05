@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="41" nextobjectid="98">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="90" height="150" tilewidth="32" tileheight="32" infinite="0" nextlayerid="41" nextobjectid="101">
  <editorsettings>
   <export target="main.js" format="js"/>
  </editorsettings>
@@ -2570,9 +2570,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="32" name="doors">
-  <object id="7" name="entry" x="77" y="4400" width="13" height="7.75"/>
- </objectgroup>
  <objectgroup id="36" name="texts">
   <object id="36" name="text" x="147" y="4170" width="156" height="21">
    <properties>
@@ -2791,5 +2788,12 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="40" name="Object Layer 6"/>
+ <objectgroup id="32" name="doors">
+  <object id="7" name="entry" x="77" y="4400" width="13" height="7.75"/>
+  <object id="99" name="exit" x="40" y="3006" width="15" height="59">
+   <properties>
+    <property name="to" value="lobby"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

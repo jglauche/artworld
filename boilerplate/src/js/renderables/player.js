@@ -1,6 +1,6 @@
-import { Entity, Sprite, Rect, game, input, collision } from 'melonjs/dist/melonjs.module.js';
+import { Entity, Sprite, Rect, game, level, input, collision } from 'melonjs/dist/melonjs.module.js';
 import TextRenderer from 'js/renderables/text_renderer.js';
-
+import MapEntry from 'js/renderables/map_entry.js';
 
 class PlayerEntity extends Entity {
     constructor(x, y, settings) {
@@ -10,6 +10,7 @@ class PlayerEntity extends Entity {
 
         super(x, y , settings);
         // max walking & jumping speed
+
         this.body.setMaxVelocity(8.0, 8.0);
         this.body.setFriction(1,1);
         this.body.force.set(0, 0);
@@ -25,12 +26,17 @@ class PlayerEntity extends Entity {
             collision.types.WORLD_SHAPE
         );
         game.viewport.follow(this.pos, game.viewport.AXIS.BOTH, 0.4);
+        // console.log("player was created");
     }
     /**
      * update the entity
      */
     update(dt) {
         var keypress = 0;
+        if (input.isKeyPressed('debug')){
+          keypress = 1;
+          console.log(this);
+        }
         if (input.isKeyPressed('left')) {
             keypress = 1;
             // flip the sprite on horizontal axis
@@ -118,6 +124,12 @@ class PlayerEntity extends Entity {
       }
       return false;
     }
+
+  onDestroyEvent(){
+//    console.log("player was destroyed");
+  }
+
+
 };
 
 export default PlayerEntity;

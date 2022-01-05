@@ -5,6 +5,7 @@ import TitleScreen from 'js/stage/title.js';
 import PlayScreen from 'js/stage/play.js';
 import PlayerEntity from 'js/renderables/player.js';
 import MapEntry from 'js/renderables/map_entry.js';
+import MapExit from 'js/renderables/map_exit.js';
 import TextRenderer from 'js/renderables/text_renderer.js';
 import Artwork from 'js/renderables/artwork.js';
 import Fluent from 'js/plugin/fluent/fluent.js';
@@ -37,6 +38,7 @@ me.device.onReady(() => {
   me.input.bindKey(me.input.KEY.A, "left");
   me.input.bindKey(me.input.KEY.W, "up");
   me.input.bindKey(me.input.KEY.S, "down");
+  me.input.bindKey(me.input.KEY.E, "debug");
 //  me.input.unbindPointer(me.input.pointer.LEFT);
 
 
@@ -45,13 +47,16 @@ me.device.onReady(() => {
 
     // set the user defined game stages
 //      me.state.set(me.state.MENU, new TitleScreen());
-      me.state.set(me.state.PLAY, new PlayScreen());
+//       me.state.set(me.state.PLAY, new PlayScreen("lobby"));
+      me.state.set(me.state.PLAY, new PlayScreen("artworld"));
+
 
 
       me.pool.register("entry", MapEntry);
+      me.pool.register("exit", MapExit);
       me.pool.register("text", TextRenderer);
       me.pool.register("artwork", Artwork);
-      me.pool.register("mainPlayer", PlayerEntity);
+      me.pool.register("entry", PlayerEntity);
 
       // Start the game.
       me.state.change(me.state.PLAY);

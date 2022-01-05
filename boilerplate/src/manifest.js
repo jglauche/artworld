@@ -51,6 +51,7 @@ const DataManifest = [
 { src: "./data/fnt/PressStart2P.fnt", name: "PressStart2P", type: "binary" },
 { src: "./data/fnt/PressStart2P.png", name: "PressStart2P", type: "image" },
 { src: "./data/map/artworld.tmx", name: "artworld", type: "tmx" },
+{ src: "./data/map/lobby.tmx", name: "lobby", type: "tmx" },
 { src: "./data/PIPOYA FREE RPG Character Sprites 32x32/Animal/Cat 01-1.png", name: "Cat 01-1", type: "image" },
 { src: "./data/PIPOYA FREE RPG Character Sprites 32x32/Animal/Cat 01-1r.png", name: "Cat 01-1r", type: "image" },
 { src: "./data/PIPOYA FREE RPG Character Sprites 32x32/Animal/Cat 01-2.png", name: "Cat 01-2", type: "image" },

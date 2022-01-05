@@ -61,8 +61,9 @@ header{
 #author{
   background-color: #a937cd;
   color: #ffffff;
-  margin-top: 0px;
+  margin-top: 2px;
   text-align: center;
+  border-radius: 5px;
 }
 #surface{
   font: smaller;

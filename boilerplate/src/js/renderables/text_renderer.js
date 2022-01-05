@@ -43,7 +43,6 @@ class TextRenderer extends Entity {
      //    this.body.x = text.pos.x;
    //   this.body.y = text.pos.y;
 
-      console.log("text lodaded for slug:"+slug);
 
       game.world.addChild(text);
       return this;
