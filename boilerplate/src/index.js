@@ -37,6 +37,7 @@ me.device.onReady(() => {
   me.input.bindKey(me.input.KEY.A, "left");
   me.input.bindKey(me.input.KEY.W, "up");
   me.input.bindKey(me.input.KEY.S, "down");
+//  me.input.unbindPointer(me.input.pointer.LEFT);
 
 
 

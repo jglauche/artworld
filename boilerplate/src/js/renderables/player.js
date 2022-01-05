@@ -26,7 +26,6 @@ class PlayerEntity extends Entity {
         );
         game.viewport.follow(this.pos, game.viewport.AXIS.BOTH, 0.4);
     }
-
     /**
      * update the entity
      */
@@ -100,7 +99,7 @@ class PlayerEntity extends Entity {
               document.getElementById("description").innerHTML = "";
               document.getElementById("link").innerHTML = "";
               document.getElementById("author").innerHTML = "";
-              document.getElementById("licence").innerHTML = "";
+              document.getElementById("license").innerHTML = "";
               document.getElementById("surface").innerHTML = "";
               document.getElementById("size").innerHTML = "";
               return false;
@@ -109,7 +108,7 @@ class PlayerEntity extends Entity {
               document.getElementById("description").innerHTML = other.description;
               document.getElementById("link").innerHTML = other.link;
               document.getElementById("author").innerHTML = other.author;
-              document.getElementById("licence").innerHTML = other.licence;
+              document.getElementById("license").innerHTML = other.license;
               document.getElementById("surface").innerHTML = other.surface;
               document.getElementById("size").innerHTML = other.size;
               return false;

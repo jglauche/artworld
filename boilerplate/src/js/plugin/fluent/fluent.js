@@ -10,8 +10,7 @@ async function load(lvl){
     });
 }
 const EventEmitter = require('events');
-const bus = new EventEmitter();
-
+const bus = new EventEmitter().setMaxListeners(1000);
 
 class Fluent extends me.plugin.Base{
   constructor(lang="en"){
@@ -50,10 +49,21 @@ class Fluent extends me.plugin.Base{
     return parts
   }
 
-  async get_slug(slug, ret_slug = true){
+  async get_attributes(slug){
     return (this.rdy()).then(a => {
       let msg = this.bundle.getMessage(slug)
       if (msg != undefined) {
+        return msg.attributes;
+      }
+      return null;
+    });
+  }
+
+
+  async get_slug(slug, ret_slug = true){
+    return (this.rdy()).then(a => {
+      let msg = this.bundle.getMessage(slug)
+      if (msg != undefined && msg.value != null) {
         return this.fmt(msg.value)
       }
       if (ret_slug){
