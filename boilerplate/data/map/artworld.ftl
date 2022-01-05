@@ -1,11 +1,15 @@
-hello = Hello World
-i18n-works = I18n
-  Works!!!
+all-creatures-welcome = ✓ All creatures welcome
+sit-on-art = ✓ sit on art
+touch-art = ✓ touch art
+dont-nft = X use art for NFT
+rc3-artworld = RC3
+  Artworld
+
 
 welcome = Welcome! <3
 fluid-art-sign = Fluid acrylic art
 by-jennyfluff = by Jennyfluff
-and-guests = and Guests
+and-guests = and guests
 walk-on-art = ✓ Walk on art
 
 #km_ =
@@ -78,6 +82,15 @@ km_115 =
   .surface = canvas
   .size = 50x40cm
 
+km_122 =
+  .name = Slug Dance
+  .desc = Two slugs, one blue-purple and one red-ish-purple, wrapped aroudn each other.
+    There's a green background mostly to the top/left and a purple-to-red background to the right
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/122
+  .surface = canvas
+  .size = 40x30cm
+
 km_123 =
   .title = Yellow Sea Toad
   .desc = A yellow sea toad emerging with a wave of white-blue-ish next to yellow, red and purple bubbles.
@@ -104,6 +117,16 @@ km_125 =
   .link = https://kittenme.ws/art/gallery/125
   .surface = canvas
   .size = 30x30cm
+
+km_127 =
+  .title = Colorful Birb
+  .desc = A semi-camouflaged bird on a purple background.
+    The bird is blue with a pattern of purple and orange as well as green towards its head. It has a dark purple beak.
+    A bit of white fog is blowing on it from the left to right highlighting its shape.
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/127
+  .surface = canvas
+  .size = 25x25cm
 
 
 km_134 =
