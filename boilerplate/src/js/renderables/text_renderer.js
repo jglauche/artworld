@@ -25,7 +25,7 @@ class TextRenderer extends Entity {
         textAlign : "center",
         fillStyle: color,
         text : this.stext,
-        offScreenCanvas: true,
+        offScreenCanvas: false,
         anchorPoint: { x: 0, y: 1 }
       });
 
@@ -39,15 +39,15 @@ class TextRenderer extends Entity {
         text.update();
       }
       this.text = text;
-      //    this.body.x = text.pos.x;
+      this.text.autoTransform = true;
+     //    this.body.x = text.pos.x;
    //   this.body.y = text.pos.y;
 
       console.log("text lodaded for slug:"+slug);
+
       game.world.addChild(text);
       return this;
     });
-
-
   }
 
   onCollision(){
