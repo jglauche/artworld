@@ -10,6 +10,11 @@ module.exports = (env) => {
   }
   console.log('server: ', env.artserver);
 
+  let footer = '';
+  if (fs.existsSync('./footer.html')){
+    footer = fs.readFileSync('./footer.html');
+  }
+
   return {
     entry: './src/index.js',
     output: {
@@ -45,7 +50,8 @@ module.exports = (env) => {
       new webpack.EnvironmentPlugin(env),
       new HtmlWebpackPlugin({
           template: './src/index.html',
-          hash: true
+          hash: true,
+          footer: footer,
       }),
     /*    new FaviconsWebpackPlugin({
           logo: './src/favicon/logo.png', // svg works too!
