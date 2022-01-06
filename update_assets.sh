@@ -2,8 +2,9 @@
 
 data=$(find data/** -name \*.png -o -name \*.tmx -o -name \*.fnt -o -name \*.json)
 
+output="./src/manifest.js"
 
-echo "const DataManifest = ["
+echo "const DataManifest = [" > $output
 while read -r line ; do
 
   file=`basename "$line"`
@@ -25,9 +26,8 @@ while read -r line ; do
       ;;
   esac
 
-  echo { src: \"./$line\",  name: \"$name\", type: \"$typ\" },;
+  echo "{ src: \"./$line\",  name: \"$name\", type: \"$typ\" }," >> $output
 
 done <<< "$data"
 
-echo "]; export default DataManifest;"
-
+echo "]; export default DataManifest;" >> $output
