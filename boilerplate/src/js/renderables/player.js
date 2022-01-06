@@ -35,14 +35,14 @@ class PlayerEntity extends Entity {
 //        this.manager = new Manager('http://localhost:3000/');
         //this.socket = this.manager.socket("/"+this.level);
         this.socket = io("http://localhost:3000");
-        this.socket.emit("level", [this.level, this.image, this.pos.x, this.pos.y, this.pos.x]);
-        // TODO: need to get already connected players
-        this.socket.on("new_player", ([socketid, image, x, y, z]) => {
-          console.log("create new player with socketid" + socketid);
-          let mp = new MultiPlayer(x, y, {image: image, sid: socketid, socket: this.socket});
-          game.world.addChild(mp, z);
+        this.socket.emit("levelChange", this.level);
+
+        this.socket.on("infoReq", () => {
+          this.socket.emit("clientInfo", [this.level, this.image, this.pos.x, this.pos.y, this.pos.x]);
         });
-        // TODO: needs to handle disconnects
+
+        this.socket.on("clientUpdate", settings => this.handleClientUpdate(settings));
+        this.socket.on("disconnectEvent", settings => this.handleClientDisconnect(settings));
 
        // console.log("player was created");
     }
@@ -149,8 +149,41 @@ class PlayerEntity extends Entity {
       return false;
     }
 
+  handleClientUpdate(settings){
+    let [sid, level, image, x, y, z] = settings;
+
+    let found = false;
+    game.world.getChildByType(MultiPlayer).forEach(mp => {
+      if (mp.sid == sid){
+        if (this.level != level){
+            game.world.removeChild(mp);
+          } else {
+            found = true;
+          }
+      }
+    });
+    if (found == false && this.level == level){
+      console.log("spawning new multiplayer");
+      let mp = new MultiPlayer(x, y, {image: image, sid: sid, socket: this.socket});
+      game.world.addChild(mp, z);
+
+    }
+  }
+
+  handleClientDisconnect(settings){
+    let [sid] = settings;
+    console.log("disconnect event got");
+    game.world.getChildByType(MultiPlayer).forEach(mp => {
+      if (mp.sid == sid){
+        console.log("removing player");
+        game.world.removeChild(mp);
+      }
+    });
+  }
+
   onDestroyEvent(){
-//    console.log("player was destroyed");
+    this.socket.disconnect();
+    console.log("player was destroyed");
   }
 
 

@@ -13,18 +13,28 @@ const io = new Server(server, {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
+  let id = socket.id;
+  io.to(id).emit("infoReq");
 
-  socket.on("level", ([room, image, x, y, z]) => {
+  socket.on("levelChange", (room) => {
+    socket.to(room).emit("infoReq");
     socket.join(room);
-    console.log("=> room " + room);
-    let id = socket.id;
-    // hm, need to have some info about the player as well
-    socket.to(room).emit("new_player", [id, image, x, y, z]);
+  });
+
+  socket.on("clientInfo", ([room, image, x, y, z]) => {
+    console.log("got clientinfo from "+ socket.id);
+    socket.to(room).emit("clientUpdate", [socket.id, room, image, x, y, z]);
   });
 
   socket.on("move", ([room, x, y]) => {
-//    console.log("move event in room"+ room + " "+x+"x"+y);
     socket.to(room).emit("move", [socket.id, x, y]);
+  });
+
+  socket.on("disconnecting", () => {
+    socket.rooms.forEach(room => {
+      console.log("sending disconnectEvent of socket "+socket.id+ " to room " +room);
+      socket.to(room).emit("disconnectEvent", [socket.id]);
+    });
   });
 
 });
