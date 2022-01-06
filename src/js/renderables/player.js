@@ -32,9 +32,7 @@ class PlayerEntity extends Entity {
         this.level = level.getCurrentLevelId();
         this.last_x = this.pos.x;
         this.last_y = this.pos.y;
-//        this.manager = new Manager('http://localhost:3000/');
-        //this.socket = this.manager.socket("/"+this.level);
-        this.socket = io("http://localhost:3000");
+        this.socket = io(process.env.artserver);
         this.socket.emit("levelChange", this.level);
 
         this.socket.on("infoReq", () => {

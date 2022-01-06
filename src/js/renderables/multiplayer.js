@@ -29,7 +29,6 @@ class MultiPlayer extends Entity {
           collision.types.WORLD_SHAPE
       );
 
-//      this.socket = io("http://localhost:3000");
       settings.socket.on("move", ([socketid, x, y]) => {
           if (this.sid == socketid){
             this.move(x,y);

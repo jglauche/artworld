@@ -1,12 +1,34 @@
+#!/usr/bin/env node
+
 const express = require('express');
-const app = express();
 const http = require('http');
-const server = http.createServer(app);
 const { Server } = require("socket.io");
+const args = require('args-parser')(process.argv);
+
+console.log(args);
+
+var port = args.port;
+var artserver = args.artserver;
+var listen = args.listen;
+
+if (artserver == undefined){
+  artserver = "http://localhost:9000";
+}
+if (port == undefined){
+  port = 3000;
+}
+if (listen == undefined){
+  listen = '127.0.0.1';
+}
+
+console.log('artserver (cors): ', artserver);
+
+const app = express();
+const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:9000",
+    origin: artserver,
     methods: ["GET", "POST"]
   }
 });
@@ -43,5 +65,5 @@ io.of("/").adapter.on("join-room", (room, id) => {  console.log(`socket ${id} ha
 
 
 
-server.listen(3000, () => {  console.log('listening on *:3000');});
+server.listen(port, listen, () => {  console.log('listening on ',listen,':', port);});
 
