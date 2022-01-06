@@ -1,23 +1,32 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "sans-serif";
-  min-height: 100vh;
   background-color: #eeeef0;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 .sidebar {
+  height: 100%;
   width: 12% !important;
   justify-content: flex-end;
   margin: 0 5px 0 10px;
 }
 
 .main {
-  width: 100% !important;
+  height: 96vh;
   display: flex;
   flex-direction: row;
 }
+
 .screen{
-  flex-shrink: 1;
+}
+
+.footer{
+  margin-bottom : 4vh;
 }
 
 #screen canvas {
