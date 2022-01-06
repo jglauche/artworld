@@ -1,9 +1,9 @@
 {
-  "name": "melonjs-es6-boilerplate",
+  "name": "Artworld.city",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Olivier Biot",
-  "license": "MIT",
+  "author": "Jennifer Glauche",
+  "license": "AGPL-3",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
