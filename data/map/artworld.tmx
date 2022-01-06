@@ -13,13 +13,13 @@
   <properties>
    <property name="tilesetCopyright" value="CC0"/>
   </properties>
-  <image source="rc3-2021-mullana-utility.png" width="960" height="1280"/>
+  <image source="../tilesets/rc3-2021-mullana-utility.png" width="960" height="1280"/>
  </tileset>
  <tileset firstgid="1201" name="rc3-mullana-floor-wall" tilewidth="32" tileheight="32" tilecount="256" columns="16">
   <properties>
    <property name="tilesetCopyright" value="CC0"/>
   </properties>
-  <image source="rc3-mullana-floor-wall.png" width="512" height="512"/>
+  <image source="../tilesets/rc3-mullana-floor-wall.png" width="512" height="512"/>
   <tile id="0">
    <properties>
     <property name="collides" type="bool" value="true"/>
@@ -270,19 +270,19 @@
   <properties>
    <property name="tilesetCopyright" value="CC0"/>
   </properties>
-  <image source="minideko.png" width="320" height="512"/>
+  <image source="../tilesets/minideko.png" width="320" height="512"/>
  </tileset>
  <tileset firstgid="1617" name="km_125_part" tilewidth="32" tileheight="32" tilecount="720" columns="24">
   <properties>
    <property name="tilesetCopyright" value="CC0"/>
   </properties>
-  <image source="boilerplate/data/artworks/kittenmews/km_125_part.png" width="768" height="960"/>
+  <image source="../artworks/kittenmews/km_125_part.png" width="768" height="960"/>
  </tileset>
  <tileset firstgid="2337" name="cija_32x32_basic_CC0" tilewidth="32" tileheight="32" tilecount="600" columns="20">
   <properties>
    <property name="tilesetCopyright" value="CC0"/>
   </properties>
-  <image source="cija_32x32_basic_CC0.png" width="640" height="960"/>
+  <image source="../tilesets/cija_32x32_basic_CC0.png" width="640" height="960"/>
  </tileset>
  <objectgroup id="35" name="collision" visible="0">
   <object id="11" x="0" y="4768" width="2880" height="32"/>
