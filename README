@@ -1,13 +1,18 @@
+Artworld.city repository
+
 You can contribute to this world!
 
-- it has to be your IP
-- f you want to be fancy, copy the map and make your own floor with art
-- if you don't want to make your own floor, I can make smaller isles for your art.
-I need: stripped .png images that have dimentions of multiples of 32 in each width and height
-- please release all assets in this repository to CC0 - public domain
+Rules:
 
+1. It has to be your IP
+2. You must make metadata (and image descriptions) that are available at least in English
+3. The content you add must be licensed in a way that allows this repository to be used by artworld.city and other instances.
+Please specify if you use Creative Commons -NC or -ND licenses:
+	- ND (No derivates) license: Please specify that embedding this content into different maps, resizing and changing file types are allowed.
+	- NC (Non commercial) license: Please specify that any site hosting this project is allowed to indirectly ask for money (i.e. donations, sponsorships).
 
-All assets in this repository are public domain.
+Limitations:
+a. Currently all images need to be .png and need to have dimensions of multiples of 32 in each with and height
+b. Content upload is currently done by github pull requests. Contact me if you don't feel comfortable with that
 
-Note that all the high resolution pictures on https://kittenme.ws/art/gallery are all right reserved - please contact me if you want to use any of them. I am happy to offer them for free for free projects.
 
