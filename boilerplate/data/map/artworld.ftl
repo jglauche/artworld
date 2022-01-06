@@ -1,3 +1,4 @@
+artworld.city = Artworld.city
 all-creatures-welcome = ✓ All creatures welcome
 sit-on-art = ✓ sit on art
 touch-art = ✓ touch art
@@ -5,12 +6,17 @@ dont-nft = X use art for NFT
 rc3-artworld = RC3
   Artworld
 
-
 welcome = Welcome! <3
 fluid-art-sign = Fluid acrylic art
-by-jennyfluff = by Jennyfluff
 and-guests = and guests
+guest-art = guest art
 walk-on-art = ✓ Walk on art
+by-jennyfluff = by Jennyfluff
+space-for-your-art = Space for your art!
+work-in-progress = Work in progress
+share-your-art = Want to share your art
+pr-welcome = Pull requests welcome
+chill-zone = chill zone
 
 #km_ =
 #  .title =
@@ -222,10 +228,13 @@ km_142 =
   .surface = canvas
   .size = 24x30
 
+by-p5t = by p5t
 
 p5t_star =
   .author = p5t
   .desc = TODO
+
+by-foorbie = by Foorbie
 
 foorbie_riss =
   .title = Riss
@@ -242,6 +251,8 @@ foorbie_orchidee =
   .desc = TODO
   .author = Foorbie
 
+
+by-lyrilith = by Lyrilith
 lyrilith_83cc92e895a4fcfb =
   .desc = TODO
   .author = Lyrilith
@@ -251,6 +262,8 @@ lyrilith_c90963e341da1cec =
   .desc = TODO
   .author = Lyrilith
   .link = https://mastodon.art/@Lyrilith
+
+by-kawaiipunk = by kawaiipunk
 
 kawaiipunk_AntiFa_Area_No_Copsz =
   .title =  AntiFa Area No Copsz
