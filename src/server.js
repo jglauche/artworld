@@ -43,9 +43,9 @@ io.on('connection', (socket) => {
     socket.join(room);
   });
 
-  socket.on("clientInfo", ([room, image, x, y, z]) => {
-    console.log("got clientinfo from "+ socket.id);
-    socket.to(room).emit("clientUpdate", [socket.id, room, image, x, y, z]);
+  socket.on("clientInfo", ([room, image, x, y, z, nick]) => {
+    console.log("got clientinfo from "+ id, room, image, x,y,z,nick);
+    socket.to(room).emit("clientUpdate", [id, room, image, x, y, z, nick]);
   });
 
   socket.on("move", ([room, x, y]) => {

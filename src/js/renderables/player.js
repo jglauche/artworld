@@ -1,4 +1,4 @@
-import { Entity, Sprite, Rect, game, level, input, collision } from 'melonjs/dist/melonjs.module.js';
+import { Text, Entity, Sprite, Rect, game, level, input, collision } from 'melonjs/dist/melonjs.module.js';
 import {Socket, Manager, io} from "socket.io-client";
 import TextRenderer from 'js/renderables/text_renderer.js';
 import MapEntry from 'js/renderables/map_entry.js';
@@ -14,6 +14,23 @@ class PlayerEntity extends Entity {
         super(x, y , settings);
         // max walking & jumping speed
         this.image = img;
+        this.nick = document.getElementById('name').value;
+        this.text = new Text(1, 1, {
+          font : "PressStart2P",
+          size : 18,
+          textBaseline : "center",
+          textAlign : "left",
+          fillStyle: "#ffffff",
+          text : this.nick,
+          offScreenCanvas: false,
+          anchorPoint: { x: 0.5, y: 0 }
+        });
+        this.text.pos.x = x + this.width/2.0;
+        this.text.pos.y = y;
+        game.world.addChild(this.text, settings.z);
+
+
+
         this.body.setMaxVelocity(8.0, 8.0);
         this.body.setFriction(1,1);
         this.body.force.set(0, 0);
@@ -36,7 +53,7 @@ class PlayerEntity extends Entity {
         this.socket.emit("levelChange", this.level);
 
         this.socket.on("infoReq", () => {
-          this.socket.emit("clientInfo", [this.level, this.image, this.pos.x, this.pos.y, this.pos.x]);
+          this.socket.emit("clientInfo", [this.level, this.image, this.pos.x, this.pos.y, settings.z, this.nick]);
         });
 
         this.socket.on("clientUpdate", settings => this.handleClientUpdate(settings));
@@ -107,8 +124,12 @@ class PlayerEntity extends Entity {
         if (this.last_x != this.pos.x || this.last_y != this.pos.y){
           this.last_x = this.pos.x;
           this.last_y = this.pos.y;
+          this.text.pos.x = this.pos.x + this.width/2.0;
+          this.text.pos.y = this.pos.y;
           this.socket.emit("move", [this.level, this.pos.x, this.pos.y]);
         }
+
+
         return (super.update(dt) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
     }
 
@@ -148,21 +169,23 @@ class PlayerEntity extends Entity {
     }
 
   handleClientUpdate(settings){
-    let [sid, level, image, x, y, z] = settings;
+    let [sid, level, image, x, y, z, nick] = settings;
 
     let found = false;
     game.world.getChildByType(MultiPlayer).forEach(mp => {
       if (mp.sid == sid){
         if (this.level != level){
-            game.world.removeChild(mp);
-          } else {
-            found = true;
-          }
+          game.world.removeChild(mp);
+        } else {
+          found = true;
+          mp.clientUpdate([image, nick]);
+        }
       }
     });
+    console.log(found);
     if (found == false && this.level == level){
       console.log("spawning new multiplayer");
-      let mp = new MultiPlayer(x, y, {image: image, sid: sid, socket: this.socket});
+      let mp = new MultiPlayer(x, y, {nick: nick, image: image, sid: sid, socket: this.socket, z: z});
       game.world.addChild(mp, z);
 
     }
@@ -180,6 +203,7 @@ class PlayerEntity extends Entity {
   }
 
   onDestroyEvent(){
+    game.world.removeChild(this.text);
     this.socket.disconnect();
     console.log("player was destroyed");
   }

@@ -1,4 +1,4 @@
-import { Entity, Sprite, Rect, game, level, input, collision } from 'melonjs/dist/melonjs.module.js';
+import { Text, Entity, Sprite, Rect, game, level, input, collision } from 'melonjs/dist/melonjs.module.js';
 import TextRenderer from 'js/renderables/text_renderer.js';
 import MapEntry from 'js/renderables/map_entry.js';
 import {Socket, Manager, io} from "socket.io-client";
@@ -12,6 +12,7 @@ class MultiPlayer extends Entity {
       let sid = settings.sid;
       super(x, y , settings);
       // max walking & jumping speed
+      this.nick = settings.nick;
       this.image = img;
       this.sid = sid;
       this.body.setMaxVelocity(8.0, 8.0);
@@ -28,6 +29,21 @@ class MultiPlayer extends Entity {
       this.body.setCollisionMask(
           collision.types.WORLD_SHAPE
       );
+      console.log(this.nick, x,y,settings.z);
+      this.text = new Text(1, 1, {
+        font : "PressStart2P",
+        size : 18,
+        textBaseline : "center",
+        textAlign : "left",
+        fillStyle: "#420f42",
+        text : this.nick,
+        offScreenCanvas: false,
+        anchorPoint: { x: 0.5, y: 0 }
+      });
+      this.text.pos.x = x + this.width/2.0;
+      this.text.pos.y = y;
+      game.world.addChild(this.text, settings.z);
+
 
       settings.socket.on("move", ([socketid, x, y]) => {
           if (this.sid == socketid){
@@ -42,16 +58,24 @@ class MultiPlayer extends Entity {
   move(x,y){
     this.pos.x = x;
     this.pos.y = y;
+    this.text.pos.x = x;
+    this.text.pos.y = y;
   }
-  /**
-   * update the entity
-   */
+
+  clientUpdate(settings){
+    [image, nick] = settings;
+    this.image = image;
+    this.nick = nick;
+    this.text.setText(nick);
+  }
+
   update(dt) {
       return (super.update(dt));
   }
 
 
   onDestroyEvent(){
+    game.world.removeChild(this.text);
 //    console.log("player was destroyed");
   }
 

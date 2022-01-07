@@ -25,7 +25,6 @@ class Keys extends me.plugin.Base{
   }
 
   game(){
-    console.log("bind keys");
     me.input.unbindKey(me.input.KEY.ENTER);
     gameKeys.forEach((action, key) => {
       me.input.bindKey(key, action);
