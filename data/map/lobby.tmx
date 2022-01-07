@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="24" height="24" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#00000000" nextlayerid="10" nextobjectid="13">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="24" height="24" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#2a2a2a" nextlayerid="10" nextobjectid="13">
  <tileset firstgid="1" name="rc3-mullana-floor-wall" tilewidth="32" tileheight="32" tilecount="256" columns="16">
   <image source="../tilesets/rc3-mullana-floor-wall.png" width="512" height="512"/>
  </tileset>
