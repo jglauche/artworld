@@ -6,9 +6,9 @@ import MultiPlayer from 'js/renderables/multiplayer.js';
 
 class PlayerEntity extends Entity {
     constructor(x, y, settings) {
-        settings.width = 16;
+        settings.width = 32;
         settings.height = 32;
-        settings.image = "sample_character_06";
+        settings.image = "Cat 01-1r";
         let img = settings.image;
 
         super(x, y , settings);
@@ -38,8 +38,14 @@ class PlayerEntity extends Entity {
         this.body.ignoreGravity = true;
 
         this.alwaysUpdate = true;
-        this.renderable.addAnimation("walk",  [1, 5, 9]);
+        this.renderable.addAnimation("walk-down",  [0, 1, 2]);
+        this.renderable.addAnimation("walk-left",  [3, 4, 5]);
+        this.renderable.addAnimation("walk-right",  [6, 7, 8]);
+        this.renderable.addAnimation("walk-up",  [9, 10, 11]);
+
         this.renderable.addAnimation("stand",  [1]);
+
+
         this.renderable.setCurrentAnimation("stand");
         this.body.collisionType = collision.types.PLAYER_OBJECT;
         this.body.setCollisionMask(
@@ -67,20 +73,18 @@ class PlayerEntity extends Entity {
     update(dt) {
         var keypress = 0;
         if (input.isKeyPressed('debug')){
-          this.socket.emit("msg", "beep");
-
           keypress = 1;
           console.log(this);
         }
         if (input.isKeyPressed('left')) {
             keypress = 1;
             // flip the sprite on horizontal axis
-            this.renderable.flipX(true);
+            this.renderable.flipX(false);
             // update the default force
             this.body.force.x = -this.body.maxVel.x;
             // change to the walking animation
-            if (!this.renderable.isCurrentAnimation("walk")) {
-                this.renderable.setCurrentAnimation("walk");
+            if (!this.renderable.isCurrentAnimation("walk-left")) {
+                this.renderable.setCurrentAnimation("walk-left");
             }
         } else if (input.isKeyPressed('right')) {
             keypress = 1;
@@ -89,8 +93,8 @@ class PlayerEntity extends Entity {
             // update the entity velocity
             this.body.force.x = this.body.maxVel.x;
             // change to the walking animation
-            if (!this.renderable.isCurrentAnimation("walk")) {
-                this.renderable.setCurrentAnimation("walk");
+            if (!this.renderable.isCurrentAnimation("walk-right")) {
+                this.renderable.setCurrentAnimation("walk-right");
             }
         }
         if (input.isKeyPressed('up')) {
@@ -100,8 +104,8 @@ class PlayerEntity extends Entity {
             // update the default force
             this.body.force.y = -this.body.maxVel.y;
             // change to the walking animation
-            if (!this.renderable.isCurrentAnimation("walk")) {
-                this.renderable.setCurrentAnimation("walk");
+            if (!this.renderable.isCurrentAnimation("walk-up")) {
+                this.renderable.setCurrentAnimation("walk-up");
             }
         } else if (input.isKeyPressed('down')) {
             keypress = 1;
@@ -110,8 +114,8 @@ class PlayerEntity extends Entity {
             // update the entity velocity
             this.body.force.y = this.body.maxVel.y;
             // change to the walking animation
-            if (!this.renderable.isCurrentAnimation("walk")) {
-                this.renderable.setCurrentAnimation("walk");
+            if (!this.renderable.isCurrentAnimation("walk-down")) {
+                this.renderable.setCurrentAnimation("walk-down");
             }
         }
 
