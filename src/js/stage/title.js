@@ -1,5 +1,6 @@
-import {Stage, Text, state, event, game, input, plugins} from 'melonjs/dist/melonjs.module.js';
+import {Stage, Text, loader, state, event, game, input, plugins} from 'melonjs/dist/melonjs.module.js';
 import PlayScreen from 'js/stage/play.js';
+import {DataManifest, Characters, Artworld} from 'manifest.js';
 
 function gameScreen() {
   let save = document.getElementById('savesettings').checked;
@@ -18,6 +19,17 @@ class TitleScreen extends Stage {
   onResetEvent() {
     plugins.keys.title();
 
+/*
+    for(let i=1; i<= 16; i++){
+      let n = "";
+      if (i < 10){
+        n = "0";
+      }
+      document.getElementById('characters').append(
+        loader.getImage("sample_character_"+n+i)
+      );
+    }
+*/
     let nick = localStorage.getItem('nick');
     if (nick != null){
       document.getElementById('name').value = nick;
@@ -30,6 +42,7 @@ class TitleScreen extends Stage {
         gameScreen();
       }
     });
+
     document.getElementById('start').addEventListener('click', btn => {
       gameScreen();
     });

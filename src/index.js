@@ -11,7 +11,7 @@ import Artwork from 'js/renderables/artwork.js';
 import Fluent from 'js/plugin/fluent/fluent.js';
 import Keys from 'js/plugin/keys.js';
 
-import DataManifest from 'manifest.js';
+import {DataManifest, Characters} from 'manifest.js';
 
 
 
@@ -43,6 +43,7 @@ me.device.onReady(() => {
 
 
 
+  me.loader.preload(Characters);
   me.loader.preload(DataManifest, function() {
 
     // set the user defined game stages

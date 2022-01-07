@@ -1,4 +1,6 @@
-import { Entity, Trigger, collision, plugins } from 'melonjs/dist/melonjs.module.js';
+import { Entity, Trigger, loader, collision, plugins } from 'melonjs/dist/melonjs.module.js';
+import { Artworld } from 'manifest.js';
+
 
 class MapExit extends Trigger {
   constructor(x, y, settings) {
@@ -9,12 +11,23 @@ class MapExit extends Trigger {
   }
 
   onCollision() {
-      plugins.fluent.set_level(this.getTriggerSettings().to);
+      let level = this.getTriggerSettings().to;
 
-      if (this.name === "Trigger") {
-          this.triggerEvent.apply(this);
-      }
-      return false;
+      // FIXME: this needs to be refactored, don't want to keep the specific level asset constants here
+      switch (level) {
+        case "artworld":
+          loader.preload(Artworld, () => { this.load() });
+        case "lobby":
+          this.load();
+      };
+      plugins.fluent.set_level(level);
+  }
+
+  load(){
+    if (this.name === "Trigger") {
+        this.triggerEvent.apply(this);
+    }
+    return false;
   }
 
 
