@@ -23,13 +23,37 @@ body {
 }
 
 .screen{
+  position: relative;
 }
 
 .footer{
   margin-bottom : 4vh;
 }
 
+#menu-overlay{
+  position: absolute;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  top: 30vh;
+}
+
+#menu {
+  display: block;
+  width: 20%;
+  background-color: #cdcdcf;
+  border-radius: 10px;
+  padding: 10px 30px 30px 30px;
+  display: grid;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 #screen canvas {
+  z-index: 1;
   width: 100% !important;
   flex-shrink: 1;
   padding: 0;
