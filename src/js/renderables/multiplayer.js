@@ -14,7 +14,6 @@ class MultiPlayer extends Entity {
       // max walking & jumping speed
       this.nick = settings.nick;
       this.image = img;
-      let s = false;
       this.sid = sid;
       this.body.setMaxVelocity(8.0, 8.0);
       this.body.setFriction(1,1);
@@ -41,7 +40,8 @@ class MultiPlayer extends Entity {
         offScreenCanvas: false,
         anchorPoint: { x: 0.5, y: 0.5 }
       });
-      this.anchorPoint = {x: 0.5, y: 0.5 };
+      this.anchorPoint.x = 0;
+      this.anchorPoint.y = 0;
       this.text.pos.x = x + this.width/2.0;
       this.text.pos.y = y;
       game.world.addChild(this.text, settings.z);
