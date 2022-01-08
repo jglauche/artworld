@@ -10,6 +10,10 @@
         <div id="menu-overlay">
           <div id="menu">
             <h1>Artworld.city</h1>
+            <label for="character">Character</label>
+            <div id="char">
+              <img id="charprev" src=""/>
+            </div>
             <label for="name">Nick Name</label>
             <input type="text" id="name" name="name" placeholder="Nickname" maxlength=32/>
             <span>
@@ -38,6 +42,8 @@
         </article>
       </div>
     </div>
+    <input type="hidden" id="character" value="" />
+
     <div class="footer">
       <%= htmlWebpackPlugin.options.footer %>
     </div>

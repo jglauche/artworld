@@ -8,7 +8,13 @@ class PlayerEntity extends Entity {
     constructor(x, y, settings) {
         settings.width = 32;
         settings.height = 32;
-        settings.image = "Cat 01-1r";
+
+        let i = document.getElementById("character").value;
+        if (i != ""){
+          settings.image = i;
+        } else {
+          settings.image = "Cat 01-1r";
+        }
         let img = settings.image;
 
         super(x, y , settings);
@@ -23,7 +29,7 @@ class PlayerEntity extends Entity {
           fillStyle: "#ffffff",
           text : this.nick,
           offScreenCanvas: false,
-          anchorPoint: { x: 0.5, y: 0 }
+          anchorPoint: { x: 0.5, y: 0.5 }
         });
         this.text.pos.x = x + this.width/2.0;
         this.text.pos.y = y;

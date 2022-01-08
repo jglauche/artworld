@@ -11,7 +11,6 @@ gameKeys.set(me.input.KEY.S, "down");
 gameKeys.set(me.input.KEY.DOWN, "down");
 gameKeys.set(me.input.KEY.E, "debug");
 
-
 class Keys extends me.plugin.Base{
   constructor(){
     super();

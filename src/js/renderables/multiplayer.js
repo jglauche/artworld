@@ -5,7 +5,7 @@ import {Socket, Manager, io} from "socket.io-client";
 
 class MultiPlayer extends Entity {
   constructor(x, y, settings) {
-      settings.width = 16;
+      settings.width = 32;
       settings.height = 32;
 
       let img = settings.image;
@@ -14,6 +14,7 @@ class MultiPlayer extends Entity {
       // max walking & jumping speed
       this.nick = settings.nick;
       this.image = img;
+      let s = false;
       this.sid = sid;
       this.body.setMaxVelocity(8.0, 8.0);
       this.body.setFriction(1,1);
@@ -38,8 +39,9 @@ class MultiPlayer extends Entity {
         fillStyle: "#420f42",
         text : this.nick,
         offScreenCanvas: false,
-        anchorPoint: { x: 0.5, y: 0 }
+        anchorPoint: { x: 0.5, y: 0.5 }
       });
+      this.anchorPoint = {x: 0.5, y: 0.5 };
       this.text.pos.x = x + this.width/2.0;
       this.text.pos.y = y;
       game.world.addChild(this.text, settings.z);
@@ -56,9 +58,10 @@ class MultiPlayer extends Entity {
   }
 
   move(x,y){
+    console.log(this);
     this.pos.x = x;
     this.pos.y = y;
-    this.text.pos.x = x;
+    this.text.pos.x = x + this.width/2.0;
     this.text.pos.y = y;
   }
 

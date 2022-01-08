@@ -50,7 +50,17 @@ body {
   margin-right: auto;
 }
 
+#char {
+	overflow: hidden;
+	width: 64px;
+	height: 64px;
+}
 
+#char img {
+	clip-path: inset(0px 0px 0px 32px);
+	transform: scale(2) translateX(-32px) translateY(32px);
+	transform-origin: left;
+}
 
 #screen canvas {
   z-index: 1;
