@@ -23,6 +23,15 @@ me.device.onReady(() => {
       alert("Your browser does not support HTML5 canvas.");
       return;
   }
+  // NOTE: The window is shrunk but the input events are not because the canvas size is set higher than the computed size.
+  // Unsure what causes this in the first place; This hack sets this manually.
+  let canvas = document.getElementsByTagName("canvas")[0];
+  let a = window.getComputedStyle(canvas, null);
+  canvas.width = parseInt(a.width, 10);
+  canvas.height = parseInt(a.height, 10);
+
+
+
 /*
   // initialize the debug plugin in development mode.
   if (process.env.NODE_ENV === 'development') {

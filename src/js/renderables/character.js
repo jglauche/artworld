@@ -13,7 +13,6 @@ class Character extends GUI_Object {
     this.image = settings.image;
     this.img = img;
     this.anchorPoint.set(0,0);
-    this.selected = settings.selected;
     this.floating = false;
     this.alwaysUpdate = true;
     this.addAnimation("stand",  [1]);
@@ -21,6 +20,7 @@ class Character extends GUI_Object {
   }
 
   onClick(dt) {
+    console.log(this);
     this.setactive();
     return (super.update(dt));
   }
