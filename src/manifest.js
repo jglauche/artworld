@@ -21,7 +21,6 @@ export const Characters = [
 { src: "./data/characters_32px/Animal/Dog 01-3.png",  name: "Dog 01-3", type: "image" },
 { src: "./data/characters_32px/Animal/Dog-01-2r.png",  name: "Dog-01-2r", type: "image" },
 { src: "./data/characters_32px/Animal/Dog-01-3r.png",  name: "Dog-01-3r", type: "image" },
-{ src: "./data/characters_32px/Boss/Boss 01.png",  name: "Boss 01", type: "image" },
 { src: "./data/characters_32px/Enemy/Enemy 01-1.png",  name: "Enemy 01-1", type: "image" },
 { src: "./data/characters_32px/Enemy/Enemy 02-1.png",  name: "Enemy 02-1", type: "image" },
 { src: "./data/characters_32px/Enemy/Enemy 03-1.png",  name: "Enemy 03-1", type: "image" },
