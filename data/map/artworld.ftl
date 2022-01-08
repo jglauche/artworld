@@ -228,6 +228,25 @@ km_142 =
   .surface = canvas
   .size = 24x30
 
+km_145 =
+  .title = Passage
+  .desc = A stream of a white mixed with blue moves diagonally from lower left to top right across an abstract painting. It goes a lot broader to the top right corner.
+    In the background, colors transition form purple to red-ish orange, to yellow, to blue and purple. The orange briefly blazes to a fire with swirls above the stream
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/145
+  .surface = canvas
+  .size = 30x30
+
+km_146 =
+  .title = Tornado
+  .desc = A tornado, depicted as a green-blue curved column emerging from the ground transforming into garbled mess on its top.
+    Behind, a purple-pink background and a stripe of orange with floral shapes behind it on the top left corner maybe indicating the horizont not being where you'd expect it.
+  .author = JennyFluff
+  .link = https://kittenme.ws/art/gallery/146
+  .surface = canvas
+  .size = 30x30
+
+
 by-p5t = by p5t
 
 p5t_star =
