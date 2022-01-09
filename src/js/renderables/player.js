@@ -74,6 +74,8 @@ class PlayerEntity extends Entity {
         this.socket.on("clientUpdate", settings => this.handleClientUpdate(settings));
         this.socket.on("disconnectEvent", settings => this.handleClientDisconnect(settings));
         input.registerPointerEvent("pointerdown", game.viewport, this.onMouseDown.bind(this));
+        input.setTouchAction(document.getElementsByTagName("canvas")[0], 'auto');
+
 
        // console.log("player was created");
     }
